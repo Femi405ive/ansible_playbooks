@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: true
+  tasks: 
+    - yum: 
+        name: 
+          - httpd
+        state: present
+    - service: 
+        name: httpd
+        state: started 
+        enabled: true
+    - raw: echo "welcome to obafemi's world" | sudo tee /var/www/html/index.html
+
+
+
+
+
+    

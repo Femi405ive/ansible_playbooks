@@ -1,0 +1,17 @@
+---
+- hosts: qa
+  tasks: 
+    - name: kernel 
+      debug: msg="Value is {{ ansible_kernel }}"
+    - name: kernel 
+      debug: msg="Value is {{ ansible_distribution }}"
+    - name: kernel 
+      debug: msg="Value is {{ ansible_hostname }}"
+    
+    - debug: var=ansible_architecture
+    - debug: var=hostvars
+    - debug: var=inventory_hostname
+    - debug: var=hostvars 
+
+
+    
